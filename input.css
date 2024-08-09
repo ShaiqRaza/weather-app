@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* all about fonts */
+.simpleFont{
+    font-family: "Proxima Nova", sans-serif;
+}
+/* allabout text-size */
+.text-xss{
+    font-size: 10px;
+}
+/* all about search */
+.grid-search{
+    display: grid;
+    grid-template-columns: 10fr 20px 1.5fr;
+}
+
+#searchInput::placeholder{
+    transition: all 300ms ease;
+    padding-left: 4px;
+}
+
+/* main content */
+#tempDisplay{
+    display: none;
+}
+.w-temp-display{
+    width: 800px;
+}
+@media(max-width:992px){
+    .w-temp-display{
+        width: 700px;
+    }
+}
+@media(max-width:770px){
+    .w-temp-display{
+        width: 500px;
+    }
+}
+@media(max-width:576px){
+    .w-temp-display{
+        width: 400px;
+    }
+}
+@media(max-width:480px){
+    .w-temp-display{
+        width: 370px;
+    }
+}
+@media(max-width:400px){
+    .w-temp-display{
+        width: 280px;
+    }
+}
+@media(max-width:300px){
+    .w-temp-display{
+        width: 200px;
+    }
+}
