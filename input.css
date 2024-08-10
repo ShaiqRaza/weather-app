@@ -4,7 +4,7 @@
 
 @font-face{
     font-family: temp;
-    src: url('./fonts/LuckiestGuy.ttf')
+    src: url(./fonts/LuckiestGuy.ttf)
 }
 /* all about fonts */
 .simpleFont{
