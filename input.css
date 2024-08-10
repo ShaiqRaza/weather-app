@@ -2,9 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face{
+    font-family: temp;
+    src: url('./fonts/LuckiestGuy.ttf')
+}
 /* all about fonts */
 .simpleFont{
-    font-family: "Proxima Nova", sans-serif;
+    font-family: temp;
 }
 /* allabout text-size */
 .text-xss{

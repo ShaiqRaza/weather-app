@@ -747,6 +747,10 @@ video {
   font-style: italic;
 }
 
+.tracking-wide {
+  letter-spacing: 0.025em;
+}
+
 .text-gray-400 {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
@@ -762,10 +766,16 @@ video {
   outline-offset: 2px;
 }
 
+@font-face{
+  font-family: temp;
+
+  src: url('./images/LuckiestGuy.ttf')
+}
+
 /* all about fonts */
 
 .simpleFont{
-  font-family: "Proxima Nova", sans-serif;
+  font-family: temp;
 }
 
 /* allabout text-size */

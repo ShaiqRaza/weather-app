@@ -51,8 +51,6 @@ let searchFunction = async ()=>{
             else{
                 // will add some functionality of UI
             }
-
-                
         }
     }
    
@@ -64,17 +62,19 @@ cross.addEventListener('click', ()=>{
 searchInput.addEventListener('focus',()=>{
     if(searchInput.value)
         cross.innerHTML = 'x'
-    searchInput.addEventListener('keyup',(key)=>{
-        if(searchInput.value.length)
-            cross.innerHTML = 'x'
-        else if(searchInput.value.length === 0)
-            cross.innerHTML = ''
-        //for enter press key
-        if(key.keyCode === 13){
-            searchButton.click()
-            searchInput.blur()
-        }
-    })
+    else
+        cross.innerHTML = ''
+})
+searchInput.addEventListener('keyup',(key)=>{ 
+    //for enter press key
+    if(key.keyCode === 13){
+        searchButton.click()
+        searchInput.blur()
+    }
+    else if(searchInput.value)
+        cross.innerHTML = 'x'
+    else
+        cross.innerHTML = ''
 })
 searchInput.addEventListener('blur',()=>{
     cross.innerHTML = ''
