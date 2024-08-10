@@ -692,6 +692,10 @@ video {
   padding-right: 0.5rem;
 }
 
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
 .pl-2 {
   padding-left: 0.5rem;
 }
@@ -752,6 +756,11 @@ video {
   color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
+.text-sky-200 {
+  --tw-text-opacity: 1;
+  color: rgb(186 230 253 / var(--tw-text-opacity));
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -768,10 +777,26 @@ video {
   src: url('./fonts/LuckiestGuy.ttf')
 }
 
+@font-face{
+  font-family: logo;
+
+  src: url('./fonts/BLACK\ DECEMBER.ttf')
+}
+
+/* all about translate */
+
+.translate-y-15p{
+  transform: translateY(15%);
+}
+
 /* all about fonts */
 
 .simpleFont{
   font-family: temp;
+}
+
+.logoFont{
+  font-family: logo;
 }
 
 /* allabout text-size */
@@ -863,6 +888,10 @@ video {
     width: 18rem;
   }
 
+  .xsss\:pb-5 {
+    padding-bottom: 1.25rem;
+  }
+
   .xsss\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -929,6 +958,10 @@ video {
     padding-right: 0.75rem;
   }
 
+  .xss\:pb-6 {
+    padding-bottom: 1.5rem;
+  }
+
   .xss\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -972,6 +1005,10 @@ video {
 
   .xs\:w-16 {
     width: 4rem;
+  }
+
+  .xs\:pb-7 {
+    padding-bottom: 1.75rem;
   }
 
   .xs\:text-6xl {
@@ -1018,6 +1055,10 @@ video {
   .sm\:px-4 {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+
+  .sm\:pb-8 {
+    padding-bottom: 2rem;
   }
 
   .sm\:text-base {
@@ -1074,6 +1115,10 @@ video {
     border-bottom-right-radius: 0.5rem;
   }
 
+  .md\:pb-9 {
+    padding-bottom: 2.25rem;
+  }
+
   .md\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
@@ -1096,5 +1141,9 @@ video {
 
   .lg\:w-28 {
     width: 7rem;
+  }
+
+  .lg\:pb-10 {
+    padding-bottom: 2.5rem;
   }
 }

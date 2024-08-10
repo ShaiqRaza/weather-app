@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>Document</title>
+    <title>Weather App by Shaiq Raza</title>
 </head>
 <body class="h-screen w-screen">
     <div class="h-full w-full bg-[url('./images/mainBackground.jpg')] bg-center bg-cover flex flex-col justify-center items-center bg-no-repeat relative">
+        <div id="logo" class="logoFont text-sky-200 xs:text-6xl xss:text-5xl xsss:text-4xl text-3xl flex flex-col items-center lg:pb-10 md:pb-9 sm:pb-8 xs:pb-7 xss:pb-6 xsss:pb-5 pb-4">
+            <div>WEATHER</div>
+            <div>APP</div>    
+        </div>
         <div id="searchContainer" class="grid-search md:w-96 xss:w-80 xsss:w-72 w-60 md:h-9 xss::h-8 xsss:h-7 h-6 md:text-base sm:text-sm text-xs md:rounded-lg rounded-md">
             <input type="text" id="searchInput" placeholder="Search location" class="w-full h-full pl-2 outline-none md:rounded-l-lg rounded-l-md bg-white">
             <button id="cross" class="bg-white text-gray-400 w-full h-full hover:text-gray-800"></button>
@@ -16,7 +20,7 @@
                 <i class="fa-solid fa-magnifying-glass" ></i>
             </button>
         </div>
-        <div id="tempDisplay" class="absolute h-3/4 lg:w-2/5 md:w-1/2 sm:w-3/4 xss:w-5/6 w-11/12 text-white">
+        <div id="tempDisplay" class="absolute h-3/4 lg:w-2/5 md:w-1/2 sm:w-3/4 xss:w-5/6 w-11/12 text-white translate-y-15p">
             <div class="h-full w-full flex flex-col justify-evenly items-center">
                 <div class="flex flex-col justify-center items-center">
                     <div class="xs:text-6xl xss:text-5xl xsss:text-4xl text-3xl font-bold">

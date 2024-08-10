@@ -6,9 +6,21 @@
     font-family: temp;
     src: url('./fonts/LuckiestGuy.ttf')
 }
+@font-face{
+    font-family: logo;
+    src: url('./fonts/BLACK\ DECEMBER.ttf')
+}
+
+/* all about translate */
+.translate-y-15p{
+    transform: translateY(15%);
+}
 /* all about fonts */
 .simpleFont{
     font-family: temp;
+}
+.logoFont{
+    font-family: logo;
 }
 /* allabout text-size */
 .text-xss{

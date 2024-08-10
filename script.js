@@ -17,18 +17,37 @@ function setAllData(response){
     humidity.innerHTML = response.main.humidity
     pressure.innerHTML = response.main.pressure
 }
-function searchContainerAnimation(){
-    gsap.to(searchContainer,{
-        duration: 2,
-        y: -(window.innerHeight*0.43),
-        ease: "circ.out",
-    })
+
+let timeLine = gsap.timeline();
+let logoAnimationFlag = true
+
+function searchContainerAndLogoAnimation(){
+    if(logoAnimationFlag){
+        timeLine.to(logo,{
+            duration: 0.3,
+            opacity: 0,
+        })
+        timeLine.to(searchContainer,{
+            duration: 2,
+            y: -(window.innerHeight*0.36),
+            ease: "circ.out",
+        })
+        timeLine.to(logo,{
+            duration: 0,
+            y: -(window.innerHeight*0.36),
+            ease: "circ.out",
+        })
+        timeLine.to(logo,{
+            duration: 0.3,
+            opacity: 100,
+        })
+        logoAnimationFlag = false
+    }
 }
 function displayMainContentAnimation(){
     tempDisplay.style.display='block'
-    gsap.from( tempDisplay, {
+    timeLine.from( tempDisplay, {
         duration: 1,
-        delay: 1,
         ease: "circ.out",
         opacity: 0,
         display: 'none',
@@ -44,8 +63,7 @@ let searchFunction = async ()=>{
             if(response.status === 200){
                 response = await response.json()
                 setAllData(response)
-                searchContainerAnimation()
-                //displaying main content for weather after search
+                searchContainerAndLogoAnimation()
                 displayMainContentAnimation()  
             }
             else{
