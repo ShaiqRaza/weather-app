@@ -583,8 +583,8 @@ video {
   height: 1.25rem;
 }
 
-.h-6 {
-  height: 1.5rem;
+.h-8 {
+  height: 2rem;
 }
 
 .h-full {
@@ -880,8 +880,8 @@ video {
 }
 
 @media (min-width: 300px) {
-  .xsss\:h-7 {
-    height: 1.75rem;
+  .xsss\:h-9 {
+    height: 2.25rem;
   }
 
   .xsss\:w-72 {
@@ -1073,16 +1073,16 @@ video {
 }
 
 @media (min-width: 770px) {
+  .md\:h-11 {
+    height: 2.75rem;
+  }
+
   .md\:h-24 {
     height: 6rem;
   }
 
   .md\:h-8 {
     height: 2rem;
-  }
-
-  .md\:h-9 {
-    height: 2.25rem;
   }
 
   .md\:w-1\/2 {
