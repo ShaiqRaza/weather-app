@@ -9,10 +9,12 @@
 </head>
 <body class="h-screen w-screen overflow-hidden">
     <div class="h-full w-full bg-[url('./images/mainBackground.jpg')] bg-center bg-cover flex flex-col justify-center items-center bg-no-repeat relative">
+        <!-- Logo of the App -->
         <div id="logo" class="logoFont text-sky-200 xs:text-5xl xss:text-4xl xsss:text-3xl text-2xl flex flex-col items-center lg:mb-10 md:mb-9 sm:mb-8 xs:mb-7 xss:mb-6 xsss:mb-5 mb-4">
             <div>WEATHER</div>
             <div>APP</div>    
         </div>
+        <!-- Search Related tools of the App -->
         <div id="searchContainer" class="grid-search md:w-96 xss:w-80 xsss:w-72 w-60 md:h-9 xsss:h-8 h-7 md:text-base sm:text-sm text-xs md:rounded-lg rounded overflow-hidden">
             <input type="text" id="searchInput" placeholder="Search location" class="w-full h-full pl-2 outline-0 md:rounded-l-lg rounded-l-md bg-white">
             <button id="cross" class="bg-white text-gray-400 w-full h-full hover:text-gray-800"></button>
@@ -20,8 +22,10 @@
                 <i class="fa-solid fa-magnifying-glass" ></i>
             </button>
         </div>
+        <!-- main content related to thetemprature and weather -->
         <div id="tempDisplay" class="absolute h-3/4 lg:w-2/5 md:w-3/5 sm:w-3/4 xss:w-5/6 w-11/12 text-white translate-y-16p hidden">
             <div class="h-full w-full flex flex-col justify-evenly items-center">
+                <!-- name of Location and Date-->
                 <div class="flex flex-col justify-center items-center">
                     <div class="xs:text-6xl xss:text-5xl xsss:text-4xl text-3xl font-bold">
                         <span id="city"></span><span>, </span><span id="country"></span>
@@ -33,6 +37,7 @@
                         <span id="year"></span>
                     </div>
                 </div>
+                <!-- sunrise and sunset -->
                 <div class="w-full flex">
                     <div class="w-1/2 flex items-center justify-center">
                         <img src="./images/sunrise.svg" alt="error!" class="lg:w-28 lg:h-28 md:w-24 md:h-24 sm:w-20 sm:h-20 xs:w-16 xs:h-16 xss:h-14 xss:w-14 w-12 h-12 sm:px-4 xss:px-3 px-2">
@@ -43,6 +48,7 @@
                         <div id="sunset"></div>
                     </div>
                 </div>
+                <!-- main temperature and feels like temperature -->
                 <div class="flex flex-col items-center">
                     <div class="xss:text-6xl xsss:text-5xl text-4xl simpleFont">
                         <span id="mainTemp"></span><span><sup class="xss:text-5xl xsss:text-4xl text-3xl">o</sup>c</span>
@@ -52,6 +58,7 @@
                         <span id="feelTemp"></span><sup class="xss:text-lg xsss:text-base text-sm">o</sup>c
                     </div>
                 </div>
+                <!-- max-min and weather description -->
                 <div class="font-bold flex flex-col items-center">
                     <div class="xss:text-3xl xsss:text-2xl text-xl simpleFont tracking-wide">
                         <span id="maxTemp"></span><span><sup class="xss:text-xl xsss:text-lg text-base">o</sup>c / </span>
@@ -88,6 +95,7 @@
                 </div>
             </div>
         </div>
+        <!-- content related to the 7 days forecast -->
         <div id="forecast" class="absolute h-3/4 lg:w-2/5 md:w-3/5 sm:w-3/4 xss:w-5/6 w-11/12 translate-y-16p hidden">
             <div class="h-full w-full flex flex-col justify-evenly items-center xss:text-xl xsss:text-lg text-base text-white relative">
                 <button id="backButton" class="back absolute hover:bg-white/35 top-4 left-6 w-10 h-8"><i class="fa-solid fa-arrow-left"></i></button>
