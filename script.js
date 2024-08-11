@@ -90,6 +90,7 @@ searchInput.addEventListener('focus',()=>{
         cross.innerHTML = 'x'
     else
         cross.innerHTML = ''
+    searchButton.style.color = 'white'
 })
 searchInput.addEventListener('keyup',(key)=>{ 
     //for enter press key
@@ -120,6 +121,7 @@ searchButton.addEventListener('click', async ()=>{
         }
         else{
             // will add some functionality of UI
+            searchButton.style.color = 'red'
         }
     }
 })
