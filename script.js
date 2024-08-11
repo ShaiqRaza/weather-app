@@ -1,17 +1,3 @@
-// for different kind of window
-function updateViewportHeight() {
-    // Calculate 1% of the viewport height
-    const vh = window.innerHeight * 0.01;
-    // Set a custom property on the root element
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-}
-
-// Initial call
-updateViewportHeight();
-// Update on resize
-window.addEventListener('resize', updateViewportHeight);
-
-
 function setAllData(response){
     let date = new Date((response.dt) * 1000)
     weekDay.innerHTML = date.toLocaleString('en-US', { weekday: 'long' });
