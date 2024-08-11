@@ -12,7 +12,7 @@
 }
 
 /* all about translate */
-.translate-y-15p{
+.translate-y-16p{
     transform: translateY(16.5%);
 }
 /* all about fonts */
@@ -37,10 +37,6 @@
     padding-left: 4px;
 }
 
-/* main content */
-#tempDisplay{
-    display: none;
-}
 .w-temp-display{
     width: 800px;
 }

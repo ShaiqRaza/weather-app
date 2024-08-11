@@ -1,3 +1,6 @@
+let timeLine = gsap.timeline();
+let logoAnimationFlag = true
+
 function setAllData(response){
     let date = new Date((response.dt) * 1000)
     weekDay.innerHTML = date.toLocaleString('en-US', { weekday: 'long' });
@@ -17,10 +20,20 @@ function setAllData(response){
     humidity.innerHTML = response.main.humidity
     pressure.innerHTML = response.main.pressure
 }
-
-let timeLine = gsap.timeline();
-let logoAnimationFlag = true
-
+function setAllForecastData(forecastResponse){
+    let forecastdays = document.querySelectorAll('.forecastDay')
+    forecastdays.forEach( (element, index) => {
+        element.innerHTML = `${Math.round(forecastResponse.list[index].main.temp_max)}<sup>o</sup>c / ${Math.round(forecastResponse.list[index].main.temp_min)}<sup>o</sup>c`
+    })
+}
+async function getForecast (response){
+    let forecastUrl = `http://api.openweathermap.org/data/2.5/forecast?id=${response.id}&appid=e32e4d863361d86cf2ed85cc9de80443&units=metric`
+    let forecastResponse = await fetch(forecastUrl)
+    if(forecastResponse.status === 200){
+        forecastResponse = await forecastResponse.json()
+    }
+    return forecastResponse
+}
 function searchContainerAndLogoAnimation(){
     if(logoAnimationFlag){
         timeLine.to(logo,{
@@ -46,6 +59,7 @@ function searchContainerAndLogoAnimation(){
 }
 function displayMainContentAnimation(){
     tempDisplay.style.display='block'
+    forecast.style.display='none'
     timeLine.from( tempDisplay, {
         duration: 1,
         ease: "circ.out",
@@ -53,24 +67,16 @@ function displayMainContentAnimation(){
         display: 'none',
     })
 }
-let searchFunction = async ()=>{
-    if( searchInput.value )
-        {
-            let cityName = searchInput.value
-            let weatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=e32e4d863361d86cf2ed85cc9de80443&units=metric`
-            let response = await fetch(weatherURL)
-           
-            if(response.status === 200){
-                response = await response.json()
-                setAllData(response)
-                searchContainerAndLogoAnimation()
-                displayMainContentAnimation()  
-            }
-            else{
-                // will add some functionality of UI
-            }
-        }
-    }
+function displayForecastAnimation(){
+    tempDisplay.style.display = 'none'
+    forecast.style.display='block'
+    timeLine.from( forecast, {
+        duration: 1,
+        ease: "circ.out",
+        opacity: 0,
+        display: 'none',
+    })
+}
    
 //typed location ko cut karne ke lie
 cross.addEventListener('click', ()=>{
@@ -94,7 +100,28 @@ searchInput.addEventListener('keyup',(key)=>{
     else
         cross.innerHTML = ''
 })
-searchInput.addEventListener('blur',()=>{
-    cross.innerHTML = ''
+searchButton.addEventListener('click', async ()=>{
+    if( searchInput.value )
+    {
+        let cityName = searchInput.value
+        let weatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=e32e4d863361d86cf2ed85cc9de80443&units=metric`
+        let response = await fetch(weatherURL)
+           
+        if(response.status === 200){
+            response = await response.json()               
+            setAllData(response)
+            searchContainerAndLogoAnimation()
+            displayMainContentAnimation()
+            let forecastResponse = await getForecast(response)  
+            console.log(forecastResponse)
+            setAllForecastData(forecastResponse)
+        }
+        else{
+            // will add some functionality of UI
+        }
+    }
 })
-searchButton.addEventListener('click', searchFunction)
+forecastButton.addEventListener('click', async ()=>{  
+    displayForecastAnimation()
+})
+backButton.addEventListener('click', displayMainContentAnimation)

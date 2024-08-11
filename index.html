@@ -9,7 +9,7 @@
 </head>
 <body class="h-screen w-screen overflow-hidden">
     <div class="h-full w-full bg-[url('./images/mainBackground.jpg')] bg-center bg-cover flex flex-col justify-center items-center bg-no-repeat relative">
-        <div id="logo" class="logoFont text-sky-200 xs:text-6xl xss:text-5xl xsss:text-4xl text-3xl flex flex-col items-center lg:mb-10 md:mb-9 sm:mb-8 xs:mb-7 xss:mb-6 xsss:mb-5 mb-4">
+        <div id="logo" class="logoFont text-sky-200 xs:text-5xl xss:text-4xl xsss:text-3xl text-2xl flex flex-col items-center lg:mb-10 md:mb-9 sm:mb-8 xs:mb-7 xss:mb-6 xsss:mb-5 mb-4">
             <div>WEATHER</div>
             <div>APP</div>    
         </div>
@@ -20,7 +20,7 @@
                 <i class="fa-solid fa-magnifying-glass" ></i>
             </button>
         </div>
-        <div id="tempDisplay" class="absolute h-3/4 lg:w-2/5 md:w-1/2 sm:w-3/4 xss:w-5/6 w-11/12 text-white translate-y-15p">
+        <div id="tempDisplay" class="absolute h-3/4 lg:w-2/5 md:w-3/5 sm:w-3/4 xss:w-5/6 w-11/12 text-white translate-y-16p hidden">
             <div class="h-full w-full flex flex-col justify-evenly items-center">
                 <div class="flex flex-col justify-center items-center">
                     <div class="xs:text-6xl xss:text-5xl xsss:text-4xl text-3xl font-bold">
@@ -59,6 +59,10 @@
                     </div>
                     <div id="weatherDescription" class="xss:text-2xl xsss:text-xl text-lg italic font-normal"></div>
                 </div>
+                <!-- forecast button -->
+                 <button id="forecastButton" class="sm:w-48 xs:w-44 xss:w-40 xsss:w-36 w-32 sm:h-12 xs:h-11 xss:h-10 xsss:h-9 h-8 text-white rounded-md bg-white/15 md:text-lg xss:text-base xsss:text-sm text-xs">
+                    7 Day Forecast
+                </button>
                 <div class="flex items-center justify-evenly md:text-lg sm:text-base xss:text-sm text-xs">
                     <div class="flex justify-between items-center sm:p-2 p-1">
                         <img src="./images/humidity.png" alt="error!" class="md:w-8 md:h-8 sm:w-7 sm:h-7 xss:h-6 xss:w-6 w-5 h-5 sm:mx-3 xss:mx-2 mx-1">
@@ -82,6 +86,18 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div id="forecast" class="absolute h-3/4 lg:w-2/5 md:w-3/5 sm:w-3/4 xss:w-5/6 w-11/12 translate-y-16p hidden">
+            <div class="h-full w-full flex flex-col justify-evenly items-center xss:text-xl xsss:text-lg text-base text-white relative">
+                <button id="backButton" class="back absolute hover:bg-white/35 top-4 left-6 w-10 h-8"><i class="fa-solid fa-arrow-left"></i></button>
+                <div class="forecastDay sm:w-52 xs:w-48 xss:w-44 xsss:w-40 w-36 sm:h-12 xs:h-11 xss:h-10 xsss:h-9 h-8 bg-white/35 rounded-md flex justify-center items-center"></div>
+                <div class="forecastDay sm:w-52 xs:w-48 xss:w-44 xsss:w-40 w-36 sm:h-12 xs:h-11 xss:h-10 xsss:h-9 h-8 bg-white/35 rounded-md flex justify-center items-center"></div>
+                <div class="forecastDay sm:w-52 xs:w-48 xss:w-44 xsss:w-40 w-36 sm:h-12 xs:h-11 xss:h-10 xsss:h-9 h-8 bg-white/35 rounded-md flex justify-center items-center"></div>
+                <div class="forecastDay sm:w-52 xs:w-48 xss:w-44 xsss:w-40 w-36 sm:h-12 xs:h-11 xss:h-10 xsss:h-9 h-8 bg-white/35 rounded-md flex justify-center items-center"></div>
+                <div class="forecastDay sm:w-52 xs:w-48 xss:w-44 xsss:w-40 w-36 sm:h-12 xs:h-11 xss:h-10 xsss:h-9 h-8 bg-white/35 rounded-md flex justify-center items-center"></div>
+                <div class="forecastDay sm:w-52 xs:w-48 xss:w-44 xsss:w-40 w-36 sm:h-12 xs:h-11 xss:h-10 xsss:h-9 h-8 bg-white/35 rounded-md flex justify-center items-center"></div>
+                <div class="forecastDay sm:w-52 xs:w-48 xss:w-44 xsss:w-40 w-36 sm:h-12 xs:h-11 xss:h-10 xsss:h-9 h-8 bg-white/35 rounded-md flex justify-center items-center"></div>
             </div>
         </div>
     </div>
