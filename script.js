@@ -61,6 +61,7 @@ function displayMainContentAnimation(){
     tempDisplay.style.display='block'
     forecast.style.display='none'
     timeLine.from( tempDisplay, {
+        delay: 0.2,
         duration: 1,
         ease: "circ.out",
         opacity: 0,
@@ -71,6 +72,7 @@ function displayForecastAnimation(){
     tempDisplay.style.display = 'none'
     forecast.style.display='block'
     timeLine.from( forecast, {
+        delay: 0.2,
         duration: 1,
         ease: "circ.out",
         opacity: 0,
