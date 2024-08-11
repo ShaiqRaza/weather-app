@@ -567,6 +567,10 @@ video {
   margin-right: 0.25rem;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
 .flex {
   display: flex;
 }
@@ -690,10 +694,6 @@ video {
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-}
-
-.pb-4 {
-  padding-bottom: 1rem;
 }
 
 .pl-2 {
@@ -880,16 +880,16 @@ video {
 }
 
 @media (min-width: 300px) {
+  .xsss\:mb-5 {
+    margin-bottom: 1.25rem;
+  }
+
   .xsss\:h-8 {
     height: 2rem;
   }
 
   .xsss\:w-72 {
     width: 18rem;
-  }
-
-  .xsss\:pb-5 {
-    padding-bottom: 1.25rem;
   }
 
   .xsss\:text-2xl {
@@ -929,6 +929,10 @@ video {
     margin-right: 0.5rem;
   }
 
+  .xss\:mb-6 {
+    margin-bottom: 1.5rem;
+  }
+
   .xss\:h-14 {
     height: 3.5rem;
   }
@@ -956,10 +960,6 @@ video {
   .xss\:px-3 {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
-  }
-
-  .xss\:pb-6 {
-    padding-bottom: 1.5rem;
   }
 
   .xss\:text-2xl {
@@ -999,16 +999,16 @@ video {
 }
 
 @media (min-width: 480px) {
+  .xs\:mb-7 {
+    margin-bottom: 1.75rem;
+  }
+
   .xs\:h-16 {
     height: 4rem;
   }
 
   .xs\:w-16 {
     width: 4rem;
-  }
-
-  .xs\:pb-7 {
-    padding-bottom: 1.75rem;
   }
 
   .xs\:text-6xl {
@@ -1026,6 +1026,10 @@ video {
   .sm\:mx-3 {
     margin-left: 0.75rem;
     margin-right: 0.75rem;
+  }
+
+  .sm\:mb-8 {
+    margin-bottom: 2rem;
   }
 
   .sm\:h-20 {
@@ -1057,10 +1061,6 @@ video {
     padding-right: 1rem;
   }
 
-  .sm\:pb-8 {
-    padding-bottom: 2rem;
-  }
-
   .sm\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
@@ -1073,6 +1073,10 @@ video {
 }
 
 @media (min-width: 770px) {
+  .md\:mb-9 {
+    margin-bottom: 2.25rem;
+  }
+
   .md\:h-10 {
     height: 2.5rem;
   }
@@ -1115,10 +1119,6 @@ video {
     border-bottom-right-radius: 0.5rem;
   }
 
-  .md\:pb-9 {
-    padding-bottom: 2.25rem;
-  }
-
   .md\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
@@ -1131,6 +1131,10 @@ video {
 }
 
 @media (min-width: 992px) {
+  .lg\:mb-10 {
+    margin-bottom: 2.5rem;
+  }
+
   .lg\:h-28 {
     height: 7rem;
   }
@@ -1141,9 +1145,5 @@ video {
 
   .lg\:w-28 {
     width: 7rem;
-  }
-
-  .lg\:pb-10 {
-    padding-bottom: 2.5rem;
   }
 }
