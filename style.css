@@ -785,7 +785,7 @@ video {
 /* all about translate */
 
 .translate-y-15p{
-  transform: translateY(15%);
+  transform: translateY(10%);
 }
 
 /* all about fonts */
