@@ -27,7 +27,7 @@ function setAllForecastData(forecastResponse){
     })
 }
 async function getForecast (response){
-    let forecastUrl = `http://api.openweathermap.org/data/2.5/forecast?id=${response.id}&appid=e32e4d863361d86cf2ed85cc9de80443&units=metric`
+    let forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?id=${response.id}&appid=e32e4d863361d86cf2ed85cc9de80443&units=metric`
     let forecastResponse = await fetch(forecastUrl)
     if(forecastResponse.status === 200){
         forecastResponse = await forecastResponse.json()
