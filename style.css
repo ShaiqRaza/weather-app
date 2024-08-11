@@ -775,9 +775,8 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.outline-none {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
+.outline-0 {
+  outline-width: 0px;
 }
 
 @font-face{
